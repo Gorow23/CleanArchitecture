@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo Restore started on `date`
+      - dotnet restore ExcelToCsv/ExcelToCsv.csproj
+  build:
+    commands:
+      - echo Build started on `date`
+      - dotnet publish -c release -o ./out
+artifacts:
+  files:
+    - out/**/*
+    - appspec.yml
+    - application_restart.sh
