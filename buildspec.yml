@@ -7,7 +7,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - dotnet publish -c release -o ./out
+      - dotnet publish "src/Apps/CleanArchitecture.Api/CleanArchitecture.Api.csproj" -c Release -o ./out
 artifacts:
   files:
     - out/**/*
