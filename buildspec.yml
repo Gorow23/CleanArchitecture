@@ -3,7 +3,7 @@ phases:
   pre_build:
     commands:
       - echo Restore started on `date`
-      - dotnet restore ExcelToCsv/ExcelToCsv.csproj
+      - dotnet restore src/Apps/CleanArchitecture.Api/CleanArchitecture.Api.csproj
   build:
     commands:
       - echo Build started on `date`
